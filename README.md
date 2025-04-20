@@ -25,11 +25,89 @@ mostqi-python/
 
 ## Instalação
 
+### Docker (recomendado)
+
 Para utilizar é necessário que você tenha o Docker instalado e configurado, tendo isso basta rodar o comando abaixo e acessar a URL `http://localhost:8080/apidocs/` para ter acesso a automação.
 
+- Criando o build do container:
+
 ```bash
-docker compose up --build
+docker build -t auto_bot .
 ```
+
+- Iniciando o container:
+
+```bash
+docker run -it -v $(pwd):/app auto_bot
+```
+
+### Sem o Docker (Linux/Mac)
+
+1. Crie o `venv`:
+
+```bash
+python -m venv venv
+```
+
+2. Ativar o `venv`:
+
+```bash
+source venv/bin/activate
+```
+
+3. Instalar as bibliotecas:
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+4. Rodando o bot:
+
+```bash
+python bot/main.py
+```
+
+> Se prefirir use o script de instalação:
+
+```bash
+chmod +x run_bot.sh
+```
+
+e então:
+
+```bash
+./script.sh
+```
+
+### Sem Docker (Windows)
+
+
+1. Crie o `venv`:
+
+```bash
+python -m venv venv
+```
+
+2. Ativar o `venv`:
+
+```bash
+venv\Scripts\activate
+```
+
+3. Instalar as bibliotecas:
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+4. Rodando o bot:
+
+```bash
+python bot\main.py
+```
+
 
 ## Como utilizar
 
