@@ -1,4 +1,8 @@
-# mostqi-python
+# Bot Portal da Transparência
+
+Este bot visa coletar informação do portal da transparência tendo como dado inicial o nome, CPF ou NIS da pessoa. O mesmo vai coletar as informações e salvar em um JSON no diretório `data` com o seguinte padrão `valor_informado_recebimento_recursos_data_hora_consulta.json` além de fazer um screenshot da tela e salvar no mesmo padrão em formato PNG.
+
+![Portal da Transparencia](./assets/img/image.png)
 
 # Estrutura Sugerida do Projeto
 
