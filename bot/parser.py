@@ -1,7 +1,6 @@
 import json
 from bs4 import BeautifulSoup
 from pathlib import Path
-from scraper import scrape_table_from_href
 from datetime import datetime
 
 
@@ -46,14 +45,13 @@ def extrair_dados(html):
                     nome_completo = valor
 
     _href = soup.find("a", {"id": "btnDetalharBpc"})
-    # detalhes = scrape_table_from_href(_href.attrs["href"]) if _href else []
 
     resultado = {
         "cpf": cpf,
         "localidade": localidade,
         "nome_completo": nome_completo,
-        "beneficios": dados_tabela
-        # "detalhes": detalhes
+        "beneficios": dados_tabela,
+        "detalhes": []
     }
 
     # Salvar no JSON
